@@ -1,3 +1,9 @@
+// Move this to the top of your script
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.body.classList.add('dark');
+}
+
 // Add interactivity as needed, e.g., smooth scrolling, theme toggle, etc.
 // Example: Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -44,4 +50,31 @@ window.addEventListener('load', () => {
       setTimeout(() => loader.style.display = 'none', 600);
     }
   }, 3000); // 3 seconds
+});
+
+// Theme Toggle Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('theme-toggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+
+  function setTheme(isDark) {
+    const themeIcon = document.getElementById('theme-icon');
+    if (isDark) {
+      document.body.classList.add('dark');
+      themeIcon.src = 'assets/sun.png';
+    } else {
+      document.body.classList.remove('dark');
+      themeIcon.src = 'assets/night.png';
+    }
+  }
+
+  // Set initial theme
+  setTheme(savedTheme === 'dark' || (!savedTheme && prefersDark));
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = !document.body.classList.contains('dark');
+    setTheme(isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
 });
