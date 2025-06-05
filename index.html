@@ -13,21 +13,20 @@
   <!-- Loading Frame -->
 <div id="loader">
   <div class="loader-content">
-    <span class="loader-dot"></span>
-    <span class="loader-dot"></span>
-    <span class="loader-dot"></span>
-    <div class="loader-text">Loading Portfolio...</div>
+    <div class="loader-text">Loading Portfolio</div>
+    <div class="loader-dots">
+      <span class="loader-dot"></span>
+      <span class="loader-dot"></span>
+      <span class="loader-dot"></span>
+    </div>
   </div>
 </div>
   <nav>
-    <div class="logo">Dipanshu</div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="logo">Dipanshu</div>
+  <button id="theme-toggle" aria-label="Toggle Theme">
+    <img src="assets/night.png" alt="Theme Icon" id="theme-icon" class="theme-icon">
+  </button>
+</nav>
   <header class="hero">
     <div class="hero-content">
       <h1 class="water-drop">Dipanshu Diwaker</h1>
@@ -179,9 +178,46 @@
     </div>
   </div>
 </section>
-  <footer>
-    &copy; 2025 Dipanshu Diwaker
-  </footer>
+  <!-- Theme Toggle Button -->
+  <footer class="modern-footer">
+  <div class="footer-section brand">
+    <!-- Brand content -->
+    <div class="footer-title">Dipanshu Diwaker</div>
+    <div class="footer-job">Salesforce Marketing Cloud Developer</div>
+  </div>
+  <div class="footer-section nav">
+    <h4 class="footer-section-title">Quick Links</h4>
+    <div class="footer-links-container">
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <ul class="footer-links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-section social">
+    <h4 class="footer-section-title">Connect With Me</h4>
+    <div class="footer-social">
+      <a href="https://wa.me/916376560586" target="_blank" aria-label="WhatsApp">
+        <img src="assets/whatsapp.png" alt="WhatsApp" class="footer-icon">
+      </a>
+      <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+        <img src="assets/facebook.png" alt="Facebook" class="footer-icon">
+      </a>
+      <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+        <img src="assets/instagram.png" alt="Instagram" class="footer-icon">
+      </a>
+      <a href="https://www.linkedin.com/in/dipanshudiwaker" target="_blank" aria-label="LinkedIn">
+        <img src="assets/linkedin.png" alt="LinkedIn" class="footer-icon">
+      </a>
+    </div>
+  </div>
+</footer>
   <script src="script.js"></script>
 </body>
 </html>
